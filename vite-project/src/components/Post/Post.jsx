@@ -1,14 +1,23 @@
 import { useState } from "react";
 import "./Post.css";
 
-import { LikeIcon } from "../../icons";
+import { LikeIcon, CommentIcon } from "../../icons";
+import SendToIcon from "../../icons/SendToIcon";
 
 const Post = ({ post }) => {
   const { isLike } = post;
+  const { isComment } = post;
+  const { isSend } = post;
   const [like, setLike] = useState(isLike);
+  const [comment, setComment] = useState(isComment);
+  const [send, setSend] = useState(isSend);
 
   const toggleLike = () => {
     setLike((prev) => !prev);
+  };
+
+  const toggleComment = () => {
+    setComment((prev) => !prev);
   };
 
   return (
@@ -36,6 +45,12 @@ const Post = ({ post }) => {
       <div className="PostActions">
         <div onClick={() => toggleLike()} className="PostActions__Like">
           <LikeIcon fill={like && like ? "#FD1D1D" : "#262626"} />
+        </div>
+        <div onClick={() => toggleComment()} className="PostActions__Comment">
+          <CommentIcon {...CommentIcon} />
+        </div>
+        <div onClick={() => toggleSend()} className="PostActions__Send">
+          <SendToIcon {...SendToIcon} />
         </div>
       </div>
     </article>

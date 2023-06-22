@@ -58,8 +58,10 @@ ul {
 }
 
 .PostActions {
+  display: flex;
   position: relative;
   padding: 12px;
+  gap: 8px;
 }
 
 .PostActions__Like > svg {

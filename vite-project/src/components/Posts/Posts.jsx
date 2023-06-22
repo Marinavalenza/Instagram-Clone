@@ -3,7 +3,6 @@ import "./Posts.css";
 import Post from "../Post";
 
 const Posts = ({ posts }) => {
-  console.log(posts);
   return (
     <div>
       <ul>
