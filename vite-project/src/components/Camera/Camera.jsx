@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { filtersData } from "../../mocks/filters";
 import "./camera.css";
 
 const Camera = () => {

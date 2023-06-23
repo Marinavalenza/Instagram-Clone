@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./Stories.css";
 
@@ -9,7 +9,7 @@ const Stories = ({ user, stories }) => {
     <div className="Stories">
       <ul className="Stories__List">
         {stories &&
-          stories.map((story, id) => (
+          stories.map((story, index) => (
             <li className="Stories__Item" key={story.index}>
               {story.name.first}
               <Story story={story} />

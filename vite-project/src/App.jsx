@@ -10,6 +10,7 @@ import TopBar from "./components/TopBar";
 import Stories from "./components/Stories";
 import Posts from "./components/Posts";
 import Camera from "./components/Camera/Camera";
+import BottomBar from "./components/BottomBar";
 
 function App() {
   const [section, setSection] = useState("home");
@@ -31,6 +32,7 @@ function App() {
           <>
             <Stories user={user} stories={stories} />
             <Posts posts={posts} />
+            <BottomBar />
           </>
         );
       case "camera":
